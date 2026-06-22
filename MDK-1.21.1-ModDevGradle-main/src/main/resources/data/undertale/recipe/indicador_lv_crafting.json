@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " G ",
+    "GMC",
+    " G "
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "C": {
+      "item": "minecraft:gold_ingot"
+    },
+    "M": {
+      "item": "undertale:contador_morte"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "undertale:indicador_lv"
+  }
+}
