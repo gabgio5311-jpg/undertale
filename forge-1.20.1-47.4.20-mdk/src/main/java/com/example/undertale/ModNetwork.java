@@ -5,10 +5,13 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.network.NetworkDirection;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.simple.SimpleChannel;
 
+import java.util.Optional;
 import java.util.function.Supplier;
 
 /**
@@ -32,6 +35,17 @@ public class ModNetwork {
                 ThrowBonePacket::encode,
                 ThrowBonePacket::decode,
                 ThrowBonePacket::handle);
+        CHANNEL.registerMessage(id++, LvSyncPacket.class,
+                LvSyncPacket::encode,
+                LvSyncPacket::decode,
+                LvSyncPacket::handle,
+                Optional.of(NetworkDirection.PLAY_TO_CLIENT));
+    }
+
+    /** Manda o total de almas atual de um jogador pro cliente dele (atualiza GUI/tooltip). */
+    public static void syncLv(ServerPlayer player) {
+        CHANNEL.send(PacketDistributor.PLAYER.with(() -> player),
+                new LvSyncPacket(LvData.getTotalAlmas(player)));
     }
 
     /**
@@ -73,6 +87,34 @@ public class ModNetwork {
 
                 level.addFreshEntity(bone);
             });
+            context.setPacketHandled(true);
+        }
+    }
+
+    /**
+     * Pacote (servidor -> cliente) com o total de almas do jogador.
+     * O cliente guarda em {@link ClientLvData} pra GUI/tooltip mostrarem o LV real.
+     */
+    public static class LvSyncPacket {
+
+        private final int total;
+
+        public LvSyncPacket(int total) {
+            this.total = total;
+        }
+
+        public static void encode(LvSyncPacket msg, FriendlyByteBuf buf) {
+            buf.writeVarInt(msg.total);
+        }
+
+        public static LvSyncPacket decode(FriendlyByteBuf buf) {
+            return new LvSyncPacket(buf.readVarInt());
+        }
+
+        public static void handle(LvSyncPacket msg, Supplier<NetworkEvent.Context> ctx) {
+            NetworkEvent.Context context = ctx.get();
+            // Roda no cliente (PLAY_TO_CLIENT). ClientLvData é puro, então é seguro.
+            context.enqueueWork(() -> ClientLvData.total = msg.total);
             context.setPacketHandled(true);
         }
     }
