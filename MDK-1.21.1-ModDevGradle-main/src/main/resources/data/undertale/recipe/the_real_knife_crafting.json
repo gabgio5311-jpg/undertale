@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "avaritia:infinity_sword"
+    },
+    {
+      "item": "undertale:real_knife"
+    }
+  ],
+  "result": {
+    "id": "undertale:the_real_knife",
+    "count": 1
+  }
+}

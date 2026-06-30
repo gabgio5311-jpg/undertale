@@ -3,14 +3,11 @@
   "category": "equipment",
   "pattern": [
     " G ",
-    "GMC",
+    "GMG",
     " G "
   ],
   "key": {
     "G": {
-      "item": "minecraft:gold_ingot"
-    },
-    "C": {
       "item": "minecraft:gold_ingot"
     },
     "M": {
@@ -18,7 +15,7 @@
     }
   },
   "result": {
-    "count": 1,
-    "id": "undertale:indicador_lv"
+    "id": "undertale:indicador_lv",
+    "count": 1
   }
 }

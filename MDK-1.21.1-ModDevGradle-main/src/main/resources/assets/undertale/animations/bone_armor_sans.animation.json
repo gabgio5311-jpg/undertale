@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"bone_armor_sans.animation.idle": {
+			"loop": true,
+			"animation_length": 1.0,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"0.0": { "vector": [0, 0, 0] }
+					}
+				}
+			}
+		},
+		"bone_armor_sans.animation.throw": {
+			"loop": true,
+			"animation_length": 1.0,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"0.0": { "vector": [0, 0, 0] }
+					}
+				}
+			}
+		}
+	}
+}

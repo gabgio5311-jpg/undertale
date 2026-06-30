@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SBS",
+    "WCW",
+    "OWO"
+  ],
+  "key": {
+    "S": {
+      "item": "undertale:sans_bones"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
+    },
+    "B": {
+      "item": "minecraft:blue_wool"
+    },
+    "C": {
+      "item": "avaritia:infinity_chestplate"
+    },
+    "O": {
+      "item": "minecraft:bone"
+    }
+  },
+  "result": {
+    "id": "undertale:sans_chestplate",
+    "count": 1
+  }
+}

@@ -8,7 +8,7 @@ tasks.named('wrapper', Wrapper).configure {
     distributionType = Wrapper.DistributionType.BIN
 }
 version = "1.0.0"
-group = "com.example.mobpacified"
+group = "com.example.undertale"
 sourceSets.main.resources {
     srcDir('src/generated/resources')
     exclude("**/*.bbmodel")
@@ -19,6 +19,7 @@ repositories {
     mavenCentral()
     maven { url = uri("https://maven.parchmentmc.org") }
     maven { url = uri("https://maven.neoforged.net/releases") }
+    maven { url = uri("https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/") } // GeckoLib (osso animado do Sans)
 }
 base {
     archivesName = "undertale"
@@ -64,6 +65,13 @@ configurations {
     runtimeClasspath.extendsFrom localRuntime
 }
 dependencies {
+    // GeckoLib para NeoForge 1.21.1 (animações da entidade do osso do Sans).
+    implementation 'software.bernie.geckolib:geckolib-neoforge-1.21.1:4.6.6'
+
+    // Re-Avaritia (NeoForge 1.21.1). O mod é dependência OBRIGATÓRIA (receitas usam avaritia:infinity_*).
+    // O código Java não importa nada do Avaritia, então fica só no runtime (carregado como mod no dev).
+    // Em produção, o Avaritia precisa estar instalado junto na pasta mods/.
+    localRuntime files('libs/Re-Avaritia-neoforge-1.21.1-1.3.9.9-release.jar')
 }
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
     var replaceProperties = [

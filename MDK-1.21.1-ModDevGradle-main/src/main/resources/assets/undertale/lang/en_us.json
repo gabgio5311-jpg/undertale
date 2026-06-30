@@ -2,5 +2,12 @@
   "itemGroup.undertale": "undertale",
   "item.undertale.real_knife": "Real Knife",
   "item.undertale.contador_morte": "Death Counter",
-  "item.undertale.indicador_lv": "LV Progress Tracker"
+  "item.undertale.indicador_lv": "LV Progress Tracker",
+  "item.undertale.the_real_knife": "the real knife",
+  "item.undertale.sans_helmet": "Sans Helmet",
+  "item.undertale.sans_chestplate": "Sans Chestplate",
+  "item.undertale.sans_leggings": "Sans Leggings",
+  "item.undertale.sans_boots": "Sans Boots",
+  "item.undertale.sans_bones": "Blue Bones",
+  "entity.undertale.bone_armor_sans": "Sans Bone"
 }

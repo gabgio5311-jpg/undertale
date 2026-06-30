@@ -18,6 +18,16 @@ public class ModCreativeTab {
                         output.accept(ModItems.REAL_KNIFE.get());
                         output.accept(ModItems.CONTADOR_MORTE.get());
                         output.accept(ModItems.INDICADOR_LV.get());
+                        output.accept(ModItems.THE_REAL_KNIFE.get());
+
+                        // Armadura do Sans
+                        output.accept(ModItems.SANS_HELMET.get());
+                        output.accept(ModItems.SANS_CHESTPLATE.get());
+                        output.accept(ModItems.SANS_LEGGINGS.get());
+                        output.accept(ModItems.SANS_BOOTS.get());
+
+                        // Ingrediente da armadura
+                        output.accept(ModItems.SANS_BONES.get());
 
     }).build());
 }

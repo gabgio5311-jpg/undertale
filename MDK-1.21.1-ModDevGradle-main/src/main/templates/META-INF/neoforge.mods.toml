@@ -11,14 +11,14 @@ license="MIT"
 [[mods]]
 modId="undertale"
 version="1.0.0"
-displayName="undertale"
+displayName="Undertale"
 
 # Quem criou o mod
 authors="Gabriel"
 
 # A descrição do seu mod
 description='''
-Um mod que pacifica monstros e criaturas do Minecraft quando recebem uma Tag com o nome de 'Amigao'.
+This mod adds things of Undertale (Sans armor set, the Real Knife, Sans bone entity).
 Feito para a versão 1.21.1 usando NeoForge!
 '''
 
@@ -36,4 +36,20 @@ modId="minecraft"
 type="required"
 versionRange="[1.21.1,1.22)"
 ordering="NONE"
+side="BOTH"
+
+# Dependência Obrigatória: Re-Avaritia (receitas usam avaritia:infinity_*)
+[[dependencies.undertale]]
+modId="avaritia"
+type="required"
+versionRange="[1.3.9,)"
+ordering="NONE"
+side="BOTH"
+
+# Dependência Obrigatória: GeckoLib (animações da entidade do osso do Sans)
+[[dependencies.undertale]]
+modId="geckolib"
+type="required"
+versionRange="[4.6,)"
+ordering="AFTER"
 side="BOTH"

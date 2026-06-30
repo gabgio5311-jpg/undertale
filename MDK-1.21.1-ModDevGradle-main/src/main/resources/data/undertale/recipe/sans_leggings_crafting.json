@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SWS",
+    "BHB",
+    "OWO"
+  ],
+  "key": {
+    "S": {
+      "item": "undertale:sans_bones"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
+    },
+    "B": {
+      "item": "minecraft:black_wool"
+    },
+    "H": {
+      "item": "avaritia:infinity_pants"
+    },
+    "O": {
+      "item": "minecraft:bone"
+    }
+  },
+  "result": {
+    "id": "undertale:sans_leggings",
+    "count": 1
+  }
+}
