@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SSS",
+    "OHS",
+    "OOO"
+  ],
+  "key": {
+    "S": {
+      "item": "undertale:sans_bones"
+    },
+    "H": {
+      "item": "avaritia:infinity_helmet"
+    },
+    "O": {
+      "item": "minecraft:bone"
+    }
+  },
+  "result": {
+    "item": "undertale:sans_helmet",
+    "count": 1
+  }
+}
