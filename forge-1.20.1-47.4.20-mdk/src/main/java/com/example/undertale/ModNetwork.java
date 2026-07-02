@@ -46,6 +46,8 @@ public class ModNetwork {
     public static void syncLv(ServerPlayer player) {
         CHANNEL.send(PacketDistributor.PLAYER.with(() -> player),
                 new LvSyncPacket(LvData.getTotalAlmas(player)));
+        // Checa as conquistas de LV (único ponto que roda em kill/login/respawn/dimensão).
+        ModCriteria.REACH_LV.trigger(player, LvData.getInfo(player).lv());
     }
 
     /**

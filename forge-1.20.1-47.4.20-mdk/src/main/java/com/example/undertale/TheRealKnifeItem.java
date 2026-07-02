@@ -94,8 +94,8 @@ public class TheRealKnifeItem extends SwordItem {
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
-        tooltipComponents.add(Component.literal("Dano: ∞").withStyle(ChatFormatting.DARK_RED));
-        tooltipComponents.add(Component.literal("§4Chara: Você está cheio de DETERMINAÇÃO."));
+        tooltipComponents.add(Component.literal("Damage: ∞").withStyle(ChatFormatting.DARK_RED));
+        tooltipComponents.add(Component.literal("§4Chara: You are filled with DETERMINATION."));
         super.appendHoverText(stack, level, tooltipComponents, tooltipFlag);
     }
 }

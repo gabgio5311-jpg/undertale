@@ -1,0 +1,18 @@
+{
+  "parent": "undertale:bloodlust",
+  "display": {
+    "icon": { "item": "undertale:chara" },
+    "title": { "translate": "advancement.undertale.determination.title" },
+    "description": { "translate": "advancement.undertale.determination.description" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "reach_lv_20": {
+      "trigger": "undertale:reach_lv",
+      "conditions": { "lv": 20 }
+    }
+  }
+}

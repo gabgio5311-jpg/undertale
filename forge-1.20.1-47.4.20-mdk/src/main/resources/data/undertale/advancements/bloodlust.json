@@ -1,0 +1,18 @@
+{
+  "parent": "undertale:love",
+  "display": {
+    "icon": { "item": "undertale:sans_bones" },
+    "title": { "translate": "advancement.undertale.bloodlust.title" },
+    "description": { "translate": "advancement.undertale.bloodlust.description" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "reach_lv_10": {
+      "trigger": "undertale:reach_lv",
+      "conditions": { "lv": 10 }
+    }
+  }
+}

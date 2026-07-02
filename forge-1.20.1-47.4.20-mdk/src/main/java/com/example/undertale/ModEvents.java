@@ -32,7 +32,7 @@ public class ModEvents {
                 }
 
                 // Envia a mensagem limpa, apenas uma vez
-                player.sendSystemMessage(Component.literal("§4Chara: Parceiro."));
+                player.sendSystemMessage(Component.literal("§4Chara: Partner."));
             }
         }
     }

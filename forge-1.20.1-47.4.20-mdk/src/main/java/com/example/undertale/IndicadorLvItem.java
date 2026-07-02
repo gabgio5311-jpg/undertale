@@ -41,14 +41,14 @@ public class IndicadorLvItem extends Item {
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         // Tooltip é renderizado no cliente, então lê do cache sincronizado (ClientLvData).
         LvData.LvInfo info = ClientLvData.info();
-        tooltipComponents.add(Component.literal("§eLV atual: §6" + info.lv()));
+        tooltipComponents.add(Component.literal("§eCurrent LV: §6" + info.lv()));
         if (info.isMax()) {
-            tooltipComponents.add(Component.literal("§6LV MÁXIMO"));
+            tooltipComponents.add(Component.literal("§6MAX LV"));
         } else {
-            tooltipComponents.add(Component.literal("§cAlmas para o próximo LV: §4"
+            tooltipComponents.add(Component.literal("§cSouls to next LV: §4"
                     + info.almasAtuais() + "/" + info.almasNecessarias()));
         }
-        tooltipComponents.add(Component.literal("Clique direito para ver detalhes").withStyle(ChatFormatting.DARK_GRAY));
+        tooltipComponents.add(Component.literal("Right-click for details").withStyle(ChatFormatting.DARK_GRAY));
 
         super.appendHoverText(stack, level, tooltipComponents, tooltipFlag);
     }

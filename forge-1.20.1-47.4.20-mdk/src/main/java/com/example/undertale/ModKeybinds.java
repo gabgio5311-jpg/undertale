@@ -17,7 +17,7 @@ public class ModKeybinds {
     // Nome DIRETO (não é chave de tradução), igual ao mod que funciona — assim
     // aparece com esse texto mesmo sem arquivo de lang. Tecla padrão: G.
     public static final KeyMapping THROW_BONE = new KeyMapping(
-            "Jogar Osso do Sans",
+            "Throw Sans's Bone",
             InputConstants.Type.KEYSYM,
             GLFW.GLFW_KEY_G,
             CATEGORY);

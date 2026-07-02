@@ -33,9 +33,9 @@ public class RealKnifeItem extends SwordItem {
         int bonus = (int) ((lv - 1) * LvEvents.DANO_POR_LV);
 
         if (bonus > 0) {
-            tooltipComponents.add(Component.literal("§eDano por LV " + lv + ": §6+" + bonus));
+            tooltipComponents.add(Component.literal("§eDamage per LV " + lv + ": §6+" + bonus));
         } else {
-            tooltipComponents.add(Component.literal("§7Suba de LV para mais dano").withStyle(ChatFormatting.GRAY));
+            tooltipComponents.add(Component.literal("§7Level up your LV for more damage").withStyle(ChatFormatting.GRAY));
         }
 
         super.appendHoverText(stack, level, tooltipComponents, tooltipFlag);

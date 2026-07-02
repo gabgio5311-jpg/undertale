@@ -1,0 +1,18 @@
+{
+  "parent": "undertale:root",
+  "display": {
+    "icon": { "item": "undertale:real_knife" },
+    "title": { "translate": "advancement.undertale.love.title" },
+    "description": { "translate": "advancement.undertale.love.description" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "reach_lv_5": {
+      "trigger": "undertale:reach_lv",
+      "conditions": { "lv": 5 }
+    }
+  }
+}

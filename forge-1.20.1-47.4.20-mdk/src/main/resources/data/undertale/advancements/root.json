@@ -1,0 +1,22 @@
+{
+  "display": {
+    "icon": { "item": "undertale:real_knife" },
+    "title": { "translate": "advancement.undertale.root.title" },
+    "description": { "translate": "advancement.undertale.root.description" },
+    "background": "minecraft:textures/block/polished_blackstone_bricks.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "get_real_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": ["undertale:real_knife"] }
+        ]
+      }
+    }
+  }
+}

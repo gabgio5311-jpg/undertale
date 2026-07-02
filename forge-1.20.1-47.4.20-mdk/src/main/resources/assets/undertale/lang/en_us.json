@@ -9,5 +9,23 @@
   "item.undertale.sans_leggings": "Sans Leggings",
   "item.undertale.sans_boots": "Sans Boots",
   "item.undertale.sans_bones": "Blue Bones",
-  "entity.undertale.bone_armor_sans": "Sans Bone"
+  "item.undertale.chara": "Chara",
+  "entity.undertale.bone_armor_sans": "Sans Bone",
+
+  "advancement.undertale.root.title": "Undertale",
+  "advancement.undertale.root.description": "Obtain a Real Knife and begin your genocide route.",
+  "advancement.undertale.first_kill.title": "But nobody came.",
+  "advancement.undertale.first_kill.description": "Kill your first monster.",
+  "advancement.undertale.lv_tracker.title": "Check Your Stats",
+  "advancement.undertale.lv_tracker.description": "Obtain the LV Progress Tracker.",
+  "advancement.undertale.love.title": "LOVE",
+  "advancement.undertale.love.description": "Reach LV 5. (LOVE = Level Of ViolencE)",
+  "advancement.undertale.bloodlust.title": "It's a Beautiful Day Outside",
+  "advancement.undertale.bloodlust.description": "Reach LV 10.",
+  "advancement.undertale.determination.title": "Filled With DETERMINATION",
+  "advancement.undertale.determination.description": "Reach LV 20 — the maximum LOVE.",
+  "advancement.undertale.sans_armor.title": "A 'Tough Bone to Crack' Armor.",
+  "advancement.undertale.sans_armor.description": "Obtain the full Sans armor set.",
+  "advancement.undertale.the_real_knife.title": "RESET",
+  "advancement.undertale.the_real_knife.description": "Craft the real knife."
 }

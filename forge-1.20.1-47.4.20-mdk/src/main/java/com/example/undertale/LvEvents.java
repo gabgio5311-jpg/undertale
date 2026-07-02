@@ -171,7 +171,7 @@ public class LvEvents {
         result.setCount(0);
 
         player.sendSystemMessage(Component.literal(
-                "§4Chara: Você ainda não tem DETERMINAÇÃO suficiente. Volte no LV " + LvData.MAX_LV + "."));
+                "§4Chara: You don't have enough DETERMINATION yet. Come back at LV " + LvData.MAX_LV + "."));
     }
 
     @SubscribeEvent

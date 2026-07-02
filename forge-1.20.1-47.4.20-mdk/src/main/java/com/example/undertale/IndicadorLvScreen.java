@@ -33,7 +33,7 @@ public class IndicadorLvScreen extends Screen {
     private static final int COR_BARRA = 0xFFFFFF00;
 
     public IndicadorLvScreen() {
-        super(Component.literal("Indicador de LV"));
+        super(Component.literal("LV Indicator"));
     }
 
     // Não pausa o jogo: assim o HP mostrado atualiza em tempo real.
@@ -75,8 +75,8 @@ public class IndicadorLvScreen extends Screen {
 
         // Almas necessárias (ou "MÁXIMO" no LV cap).
         String linhaAlmas = info.isMax()
-                ? "LV máximo atingido"
-                : "Almas necessárias: " + info.almasNecessarias();
+                ? "Max LV reached"
+                : "Souls needed: " + info.almasNecessarias();
         g.drawString(this.font, linhaAlmas, left + 16, y, COR_TEXTO);
         y += 18;
 
@@ -96,9 +96,9 @@ public class IndicadorLvScreen extends Screen {
         y = barBottom + 22;
 
         // Frase de "determinação".
-        g.drawCenteredString(this.font, Component.literal("Você está cheio de"), cx, y, COR_FRASE);
+        g.drawCenteredString(this.font, Component.literal("You are filled with"), cx, y, COR_FRASE);
         y += 12;
-        g.drawCenteredString(this.font, Component.literal("DETERMINAÇÃO."), cx, y, COR_FRASE);
+        g.drawCenteredString(this.font, Component.literal("DETERMINATION."), cx, y, COR_FRASE);
 
         super.render(g, mouseX, mouseY, partialTick);
     }

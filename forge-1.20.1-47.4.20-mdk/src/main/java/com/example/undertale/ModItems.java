@@ -33,4 +33,6 @@ public class ModItems {
             () -> new SansArmorItem(ArmorItem.Type.BOOTS));
     public static final RegistryObject<Item> SANS_BONES = ITEMS.register("sans_bones",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CHARA = ITEMS.register("chara",
+            () -> new Item(new Item.Properties()));
 }
