@@ -18,10 +18,10 @@ import net.minecraftforge.fml.common.Mod;
 public class ContadorMorteDropHandler {
 
     /** Chance base de drop (sem looting). 0.005 = 0.5%. Mantido bem baixo (servidor usa Looting 10). */
-    private static final float DROP_CHANCE = 0.005F;
+    public static final float DROP_CHANCE = 0.005F;
 
     /** Bônus por nível de Saque/Looting. 0.001 = +0.1% por nível → no Looting 10 fica ~1.5% total. */
-    private static final float LOOTING_BONUS = 0.001F;
+    public static final float LOOTING_BONUS = 0.001F;
 
     @SubscribeEvent
     public static void onLivingDrops(LivingDropsEvent event) {

@@ -16,7 +16,8 @@ public class ModItems {
     public static final RegistryObject<Item> REAL_KNIFE = ITEMS.register("real_knife",
             () -> new RealKnifeItem(new Item.Properties()));
     public static final RegistryObject<Item> CONTADOR_MORTE = ITEMS.register("contador_morte",
-            () -> new Item(new Item.Properties()));
+            () -> new DropInfoItem(new Item.Properties(),
+                    ContadorMorteDropHandler.DROP_CHANCE, ContadorMorteDropHandler.LOOTING_BONUS, "any mob"));
     public static final RegistryObject<Item> INDICADOR_LV = ITEMS.register("indicador_lv",
             () -> new IndicadorLvItem(new Item.Properties().stacksTo(1))); // stacksTo(1) faz ele não acumular no inventário
     public static final RegistryObject<Item> THE_REAL_KNIFE = ITEMS.register("the_real_knife",
@@ -32,7 +33,8 @@ public class ModItems {
     public static final RegistryObject<Item> SANS_BOOTS = ITEMS.register("sans_boots",
             () -> new SansArmorItem(ArmorItem.Type.BOOTS));
     public static final RegistryObject<Item> SANS_BONES = ITEMS.register("sans_bones",
-            () -> new Item(new Item.Properties()));
+            () -> new DropInfoItem(new Item.Properties(),
+                    SansBonesDropHandler.DROP_CHANCE, SansBonesDropHandler.LOOTING_BONUS, "skeletons"));
     public static final RegistryObject<Item> CHARA = ITEMS.register("chara",
             () -> new Item(new Item.Properties()));
 }
