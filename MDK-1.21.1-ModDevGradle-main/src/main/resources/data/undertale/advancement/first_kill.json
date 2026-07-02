@@ -1,0 +1,18 @@
+{
+  "parent": "undertale:root",
+  "display": {
+    "icon": { "item": "undertale:contador_morte" },
+    "title": { "translate": "advancement.undertale.first_kill.title" },
+    "description": { "translate": "advancement.undertale.first_kill.description" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "kill_mob": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {}
+    }
+  }
+}

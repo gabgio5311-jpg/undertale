@@ -12,12 +12,16 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(UndertaleMod.MOD_ID);
 
 
-    // Registro da Real Knife (espada de diamante comum; é o item de reparo da armadura Sans)
+    // Real Knife (comum): espada de netherite cujo dano ESCALA com o LV do jogador
+    // (bônus aplicado em LvEvents.onRealKnifeHit; tooltip em RealKnifeItem). É a ferramenta
+    // de farm de LV e o item de reparo da armadura Sans.
     public static final DeferredItem<Item> REAL_KNIFE = ITEMS.register("real_knife",
-            () -> new SwordItem(Tiers.DIAMOND, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.DIAMOND, 3, -2.4F))));
+            () -> new RealKnifeItem(new Item.Properties().attributes(SwordItem.createAttributes(Tiers.NETHERITE, 3, -2.4F))));
 
+    // Death Counter: dropa de qualquer mob; o tooltip mostra a chance (DropInfoItem).
     public static final DeferredItem<Item> CONTADOR_MORTE = ITEMS.register("contador_morte",
-            () -> new Item(new Item.Properties()));
+            () -> new DropInfoItem(new Item.Properties(),
+                    ContadorMorteDropHandler.DROP_CHANCE, ContadorMorteDropHandler.LOOTING_BONUS, "any mob"));
 
     public static final DeferredItem<Item> INDICADOR_LV = ITEMS.register("indicador_lv",
             () -> new IndicadorLvItem(new Item.Properties().stacksTo(1))); // stacksTo(1) faz ele não acumular no inventário
@@ -39,6 +43,12 @@ public class ModItems {
             () -> new SansArmorItem(ArmorItem.Type.BOOTS));
 
     // "Blue Bones": ingrediente de craft da armadura (item comum, NÃO é armadura).
+    // Dropa de esqueletos; o tooltip mostra a chance (DropInfoItem).
     public static final DeferredItem<Item> SANS_BONES = ITEMS.register("sans_bones",
+            () -> new DropInfoItem(new Item.Properties(),
+                    SansBonesDropHandler.DROP_CHANCE, SansBonesDropHandler.LOOTING_BONUS, "skeletons"));
+
+    // Chara: item de sabor / ícone do advancement do LV 20 (sem comportamento próprio).
+    public static final DeferredItem<Item> CHARA = ITEMS.register("chara",
             () -> new Item(new Item.Properties()));
 }

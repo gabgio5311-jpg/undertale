@@ -1,0 +1,22 @@
+{
+  "parent": "undertale:determination",
+  "display": {
+    "icon": { "item": "undertale:the_real_knife" },
+    "title": { "translate": "advancement.undertale.the_real_knife.title" },
+    "description": { "translate": "advancement.undertale.the_real_knife.description" },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_the_real_knife": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": ["undertale:the_real_knife"] }
+        ]
+      }
+    }
+  }
+}

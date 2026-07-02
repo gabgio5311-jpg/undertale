@@ -13,6 +13,7 @@ public class UndertaleMod {
         ModCreativeTab.CREATIVE_TABS.register(bus);
         ModEntities.ENTITY_TYPES.register(bus);
         ModArmorMaterials.ARMOR_MATERIALS.register(bus);
+        ModCriteria.TRIGGERS.register(bus); // trigger de advancement do LV (undertale:reach_lv)
 
         // GeckoLib 4.x no NeoForge se auto-inicializa — não é preciso chamar GeckoLib.initialize().
         // A rede (payload do osso) é registrada via @EventBusSubscriber em ModNetwork.

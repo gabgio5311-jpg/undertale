@@ -1,6 +1,7 @@
 package com.example.undertale;
 
 import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.resources.ResourceLocation;
@@ -9,6 +10,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
@@ -29,6 +31,17 @@ public class ModNetwork {
                 ThrowBonePayload.TYPE,
                 ThrowBonePayload.STREAM_CODEC,
                 ThrowBonePayload::handle);
+        registrar.playToClient(
+                LvSyncPayload.TYPE,
+                LvSyncPayload.STREAM_CODEC,
+                LvSyncPayload::handle);
+    }
+
+    /** Manda o total de almas atual de um jogador pro cliente dele (atualiza GUI/tooltip). */
+    public static void syncLv(ServerPlayer player) {
+        PacketDistributor.sendToPlayer(player, new LvSyncPayload(LvData.getTotalAlmas(player)));
+        // Checa as conquistas de LV (único ponto que roda em kill/login/respawn/dimensão).
+        ModCriteria.REACH_LV.get().trigger(player, LvData.getInfo(player).lv());
     }
 
     /**
@@ -68,6 +81,31 @@ public class ModNetwork {
 
                 level.addFreshEntity(bone);
             });
+        }
+    }
+
+    /**
+     * Pacote (servidor -> cliente) com o total de almas do jogador.
+     * O cliente guarda em {@link ClientLvData} pra GUI/tooltip mostrarem o LV real.
+     */
+    public record LvSyncPayload(int total) implements CustomPacketPayload {
+
+        public static final Type<LvSyncPayload> TYPE =
+                new Type<>(ResourceLocation.fromNamespaceAndPath(UndertaleMod.MOD_ID, "lv_sync"));
+
+        public static final StreamCodec<RegistryFriendlyByteBuf, LvSyncPayload> STREAM_CODEC =
+                StreamCodec.composite(
+                        ByteBufCodecs.VAR_INT, LvSyncPayload::total,
+                        LvSyncPayload::new);
+
+        @Override
+        public Type<LvSyncPayload> type() {
+            return TYPE;
+        }
+
+        public static void handle(LvSyncPayload payload, IPayloadContext context) {
+            // Roda no cliente (playToClient). ClientLvData é puro, então é seguro.
+            context.enqueueWork(() -> ClientLvData.total = payload.total());
         }
     }
 }

@@ -1,0 +1,25 @@
+{
+  "parent": "undertale:determination",
+  "display": {
+    "icon": { "item": "undertale:sans_helmet" },
+    "title": { "translate": "advancement.undertale.sans_armor.title" },
+    "description": { "translate": "advancement.undertale.sans_armor.description" },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "full_set": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": ["undertale:sans_helmet"] },
+          { "items": ["undertale:sans_chestplate"] },
+          { "items": ["undertale:sans_leggings"] },
+          { "items": ["undertale:sans_boots"] }
+        ]
+      }
+    }
+  }
+}
