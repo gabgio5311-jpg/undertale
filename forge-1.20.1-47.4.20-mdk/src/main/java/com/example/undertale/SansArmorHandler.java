@@ -56,13 +56,13 @@ public class SansArmorHandler {
     private static final float STEP_DEFAULT = 0.6F;
 
     // Velocidade das botas (valores padrão do Avaritia / ModConfig).
-    private static final double BOOT_SPEED_BASE = 0.1;
-    private static final double BOOT_SPEED_FLYING_MULT = 1.1;
-    private static final double BOOT_SPEED_SWIMMING_MULT = 1.2;
+    private static final double BOOT_SPEED_BASE = 1.5;
+    private static final double BOOT_SPEED_FLYING_MULT = 3.5;
+    private static final double BOOT_SPEED_SWIMMING_MULT = 2.5;
     private static final double BOOT_SPEED_SNEAKING_MULT = 0.1;
-    private static final double BOOT_SPEED_BACKWARD_MULT = 0.25;
-    private static final double BOOT_SPEED_STRAFING_MULT = 0.45;
-    private static final double BOOT_SPEED_SPRINTING_MULT = 0.2;
+    private static final double BOOT_SPEED_BACKWARD_MULT = 0.5;
+    private static final double BOOT_SPEED_STRAFING_MULT = 0.8;
+    private static final double BOOT_SPEED_SPRINTING_MULT = 3.5;
 
     /* ===================== Detecção do set ===================== */
 
