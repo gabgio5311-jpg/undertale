@@ -1,7 +1,7 @@
 {
   "parent": "undertale:determination",
   "display": {
-    "icon": { "item": "undertale:the_real_knife" },
+    "icon": { "id": "undertale:the_real_knife" },
     "title": { "translate": "advancement.undertale.the_real_knife.title" },
     "description": { "translate": "advancement.undertale.the_real_knife.description" },
     "frame": "challenge",

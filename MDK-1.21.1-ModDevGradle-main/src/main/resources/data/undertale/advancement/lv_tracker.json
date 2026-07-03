@@ -1,7 +1,7 @@
 {
   "parent": "undertale:root",
   "display": {
-    "icon": { "item": "undertale:indicador_lv" },
+    "icon": { "id": "undertale:indicador_lv" },
     "title": { "translate": "advancement.undertale.lv_tracker.title" },
     "description": { "translate": "advancement.undertale.lv_tracker.description" },
     "frame": "task",

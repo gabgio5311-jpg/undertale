@@ -1,6 +1,6 @@
 {
   "display": {
-    "icon": { "item": "undertale:real_knife" },
+    "icon": { "id": "undertale:real_knife" },
     "title": { "translate": "advancement.undertale.root.title" },
     "description": { "translate": "advancement.undertale.root.description" },
     "background": "minecraft:textures/block/polished_blackstone_bricks.png",

@@ -19,8 +19,6 @@ public class ModCreativeTab {
                         output.accept(ModItems.CONTADOR_MORTE.get());
                         output.accept(ModItems.INDICADOR_LV.get());
                         output.accept(ModItems.THE_REAL_KNIFE.get());
-                        output.accept(ModItems.CHARA.get());
-
                         // Armadura do Sans
                         output.accept(ModItems.SANS_HELMET.get());
                         output.accept(ModItems.SANS_CHESTPLATE.get());

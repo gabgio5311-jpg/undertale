@@ -1,7 +1,7 @@
 {
   "parent": "undertale:bloodlust",
   "display": {
-    "icon": { "item": "undertale:chara" },
+    "icon": { "id": "undertale:chara" },
     "title": { "translate": "advancement.undertale.determination.title" },
     "description": { "translate": "advancement.undertale.determination.description" },
     "frame": "goal",

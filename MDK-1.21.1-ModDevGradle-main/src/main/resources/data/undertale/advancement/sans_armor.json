@@ -1,7 +1,7 @@
 {
   "parent": "undertale:determination",
   "display": {
-    "icon": { "item": "undertale:sans_helmet" },
+    "icon": { "id": "undertale:sans_helmet" },
     "title": { "translate": "advancement.undertale.sans_armor.title" },
     "description": { "translate": "advancement.undertale.sans_armor.description" },
     "frame": "challenge",

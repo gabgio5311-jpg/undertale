@@ -1,7 +1,7 @@
 {
   "parent": "undertale:root",
   "display": {
-    "icon": { "item": "undertale:real_knife" },
+    "icon": { "id": "undertale:real_knife" },
     "title": { "translate": "advancement.undertale.love.title" },
     "description": { "translate": "advancement.undertale.love.description" },
     "frame": "task",
