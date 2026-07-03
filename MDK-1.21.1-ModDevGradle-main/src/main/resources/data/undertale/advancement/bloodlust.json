@@ -1,7 +1,7 @@
 {
   "parent": "undertale:love",
   "display": {
-    "icon": { "item": "undertale:sans_bones" },
+    "icon": { "id": "undertale:sans_bones" },
     "title": { "translate": "advancement.undertale.bloodlust.title" },
     "description": { "translate": "advancement.undertale.bloodlust.description" },
     "frame": "task",

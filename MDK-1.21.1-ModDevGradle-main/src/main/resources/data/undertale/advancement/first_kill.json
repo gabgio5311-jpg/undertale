@@ -1,7 +1,7 @@
 {
   "parent": "undertale:root",
   "display": {
-    "icon": { "item": "undertale:contador_morte" },
+    "icon": { "id": "undertale:contador_morte" },
     "title": { "translate": "advancement.undertale.first_kill.title" },
     "description": { "translate": "advancement.undertale.first_kill.description" },
     "frame": "task",

@@ -1,10 +1,12 @@
 package com.example.undertale;
 
 
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.component.Unbreakable;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -16,7 +18,12 @@ public class ModItems {
     // (bônus aplicado em LvEvents.onRealKnifeHit; tooltip em RealKnifeItem). É a ferramenta
     // de farm de LV e o item de reparo da armadura Sans.
     public static final DeferredItem<Item> REAL_KNIFE = ITEMS.register("real_knife",
-            () -> new RealKnifeItem(new Item.Properties().attributes(SwordItem.createAttributes(Tiers.NETHERITE, 3, -2.4F))));
+            () -> new RealKnifeItem(new Item.Properties()
+                    .attributes(SwordItem.createAttributes(Tiers.NETHERITE, 3, -2.4F))
+                    // Indestrutível: o Tier Netherite dá durabilidade no construtor do SwordItem,
+                    // então o componente UNBREAKABLE impede que ela seja consumida. false = sem
+                    // a linha "Inquebrável" no tooltip.
+                    .component(DataComponents.UNBREAKABLE, new Unbreakable(false))));
 
     // Death Counter: dropa de qualquer mob; o tooltip mostra a chance (DropInfoItem).
     public static final DeferredItem<Item> CONTADOR_MORTE = ITEMS.register("contador_morte",
